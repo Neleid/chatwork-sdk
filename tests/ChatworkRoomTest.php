@@ -1,7 +1,7 @@
 <?php
 
-use wataridori\ChatworkSDK\ChatworkRoom;
-use wataridori\ChatworkSDK\ChatworkSDK;
+use Neleid\ChatworkSDK\ChatworkRoom;
+use Neleid\ChatworkSDK\ChatworkSDK;
 
 class ChatworkRoomTest extends ChatworkTestBase
 {
@@ -39,7 +39,7 @@ class ChatworkRoomTest extends ChatworkTestBase
             $this->assertInternalType('array', $members);
             $checkClass = true;
             foreach ($members as $member) {
-                if (!($member instanceof wataridori\ChatworkSDK\ChatworkUser)) {
+                if (!($member instanceof Neleid\ChatworkSDK\ChatworkUser)) {
                     $checkClass = false;
                 }
             }
@@ -62,7 +62,7 @@ class ChatworkRoomTest extends ChatworkTestBase
             $checkClass = true;
             $lastMessage = null;
             foreach ($messages as $message) {
-                if (!($message instanceof wataridori\ChatworkSDK\ChatworkMessage)) {
+                if (!($message instanceof Neleid\ChatworkSDK\ChatworkMessage)) {
                     $checkClass = false;
                 }
                 $lastMessage = $message;

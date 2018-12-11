@@ -1,6 +1,6 @@
 <?php
 
-namespace wataridori\ChatworkSDK;
+namespace Neleid\ChatworkSDK;
 
 class ChatworkUser extends ChatworkBase
 {

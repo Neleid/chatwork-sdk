@@ -1,6 +1,6 @@
 <?php
 
-namespace wataridori\ChatworkSDK\Exception;
+namespace Neleid\ChatworkSDK\Exception;
 
 class NoChatworkRoomException extends \Exception
 {

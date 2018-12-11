@@ -1,7 +1,7 @@
 <?php
 
-use wataridori\ChatworkSDK\ChatworkApi;
-use wataridori\ChatworkSDK\ChatworkSDK;
+use Neleid\ChatworkSDK\ChatworkApi;
+use Neleid\ChatworkSDK\ChatworkSDK;
 
 class ChatworkApiTest extends ChatworkTestBase
 {

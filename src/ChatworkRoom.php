@@ -1,8 +1,8 @@
 <?php
 
-namespace wataridori\ChatworkSDK;
+namespace Neleid\ChatworkSDK;
 
-use wataridori\ChatworkSDK\Exception\ChatworkSDKException;
+use Neleid\ChatworkSDK\Exception\ChatworkSDKException;
 
 class ChatworkRoom extends ChatworkBase
 {
@@ -57,18 +57,18 @@ class ChatworkRoom extends ChatworkBase
     public function toArray()
     {
         return [
-            'room_id' => $this->room_id,
-            'name' => $this->name,
-            'type' => $this->type,
-            'role' => $this->role,
-            'sticky' => $this->sticky,
-            'unread_num' => $this->unread_num,
+            'room_id'     => $this->room_id,
+            'name'        => $this->name,
+            'type'        => $this->type,
+            'role'        => $this->role,
+            'sticky'      => $this->sticky,
+            'unread_num'  => $this->unread_num,
             'mention_num' => $this->mention_num,
-            'mytask_num' => $this->mytask_num,
+            'mytask_num'  => $this->mytask_num,
             'message_num' => $this->message_num,
-            'file_num' => $this->file_num,
-            'task_num' => $this->task_num,
-            'icon_path' => $this->icon_path,
+            'file_num'    => $this->file_num,
+            'task_num'    => $this->task_num,
+            'icon_path'   => $this->icon_path,
             'description' => $this->description,
         ];
     }
@@ -152,11 +152,12 @@ class ChatworkRoom extends ChatworkBase
      * Send Message.
      *
      * @param null $newMessage
+     * @param int $self_unread
      */
-    public function sendMessage($newMessage = null)
+    public function sendMessage($newMessage = null, $self_unread = 0)
     {
         $message = $newMessage ? $newMessage : $this->message;
-        $this->chatworkApi->createRoomMessage($this->room_id, $message);
+        $this->chatworkApi->createRoomMessage($this->room_id, $message, $self_unread);
     }
 
     /**
@@ -167,21 +168,28 @@ class ChatworkRoom extends ChatworkBase
      * @param bool $withName
      * @param bool $newLine
      * @param bool $usePicon
+     * @param int $self_unread
      *
      * @throws ChatworkSDKException
      */
-    public function sendMessageToList($members, $sendMessage, $withName = true, $newLine = true, $usePicon = false)
-    {
+    public function sendMessageToList(
+        $members,
+        $sendMessage,
+        $withName = true,
+        $newLine = true,
+        $usePicon = false,
+        $self_unread = 0
+    ) {
         $this->resetMessage();
         foreach ($members as $member) {
-            if (!($member instanceof wataridori\ChatworkSDK\ChatworkUser)) {
+            if (!($member instanceof Neleid\ChatworkSDK\ChatworkUser)) {
                 $this->appendTo($member, $withName, $newLine, $usePicon);
             } else {
                 throw new ChatworkSDKException('Invalid Members list');
             }
         }
         $this->appendMessage($sendMessage);
-        $this->sendMessage();
+        $this->sendMessage(null, $self_unread);
     }
 
     /**
@@ -189,11 +197,12 @@ class ChatworkRoom extends ChatworkBase
      *
      * @param null $sendMessage
      * @param bool $mention
+     * @param int $self_unread
      */
-    public function sendMessageToAll($sendMessage, $mention = true)
+    public function sendMessageToAll($sendMessage, $mention = true, $self_unread = 0)
     {
         $message = $this->buildToAll($sendMessage, $mention);
-        $this->sendMessage($message);
+        $this->sendMessage($message, $self_unread);
     }
 
     /**
@@ -231,8 +240,9 @@ class ChatworkRoom extends ChatworkBase
      * @param string $msg
      * @param bool $newLine
      * @param bool $resetMessage
+     * @param int $self_unread
      */
-    public function reply($chatworkMessages, $msg, $newLine = true, $resetMessage = true)
+    public function reply($chatworkMessages, $msg, $newLine = true, $resetMessage = true, $self_unread = 0)
     {
         if ($resetMessage) {
             $this->resetMessage();
@@ -245,6 +255,6 @@ class ChatworkRoom extends ChatworkBase
             }
         }
         $this->appendMessage($msg);
-        $this->sendMessage();
+        $this->sendMessage(null, $self_unread);
     }
 }

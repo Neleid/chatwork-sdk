@@ -1,8 +1,8 @@
 <?php
 
-namespace wataridori\ChatworkSDK;
+namespace Neleid\ChatworkSDK;
 
-use wataridori\ChatworkSDK\Exception\RequestFailException;
+use Neleid\ChatworkSDK\Exception\RequestFailException;
 
 class ChatworkRequest
 {
@@ -172,10 +172,10 @@ class ChatworkRequest
         }
 
         return [
-            'http_code' => $info['http_code'],
-            'response' => $body,
-            'usage_limit_max' => isset($headers['X-RateLimit-Limit']) ? $headers['X-RateLimit-Limit'] : null,
-            'usage_limit_remaining' => isset($headers['X-RateLimit-Remaining']) ? $headers['X-RateLimit-Remaining'] : null,
+            'http_code'              => $info['http_code'],
+            'response'               => $body,
+            'usage_limit_max'        => isset($headers['X-RateLimit-Limit']) ? $headers['X-RateLimit-Limit'] : null,
+            'usage_limit_remaining'  => isset($headers['X-RateLimit-Remaining']) ? $headers['X-RateLimit-Remaining'] : null,
             'usage_limit_reset_time' => isset($headers['X-RateLimit-Reset']) ? $headers['X-RateLimit-Reset'] : null,
         ];
     }
@@ -186,19 +186,20 @@ class ChatworkRequest
      * @param $headers
      * @return array
      */
-    protected function parse_headers ($headers) {
+    protected function parse_headers($headers)
+    {
         $result = [];
         foreach (explode("\r\n", $headers) as $header) {
             $header = explode(':', $header, 2);
             $name = trim($header[0]);
             $value = isset($header[1]) ? trim($header[1]) : '';
 
-            if(!$name){
+            if (!$name) {
                 continue;
             }
 
             if (array_key_exists($name, $result)) {
-                $result[$name] .= ", " . $value;
+                $result[$name] .= ', ' . $value;
             } else {
                 $result[$name] = $value;
             }

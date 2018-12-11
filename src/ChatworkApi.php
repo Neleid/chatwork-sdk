@@ -1,6 +1,6 @@
 <?php
 
-namespace wataridori\ChatworkSDK;
+namespace Neleid\ChatworkSDK;
 
 class ChatworkApi
 {
@@ -270,17 +270,18 @@ class ChatworkApi
      *
      * @param int $room_id
      * @param string $body
+     * @param int $self_unread
      *
      * @return array
      *
      * @see http://developer.chatwork.com/ja/endpoint_rooms.html#GET-rooms-room_id-messages
      */
-    public function createRoomMessage($room_id, $body)
+    public function createRoomMessage($room_id, $body, $self_unread = 0)
     {
         return $this->api(
             sprintf('rooms/%d/messages', $room_id),
             ChatworkRequest::REQUEST_METHOD_POST,
-            ['body' => $body]
+            ['body' => $body, 'self_unread' => $self_unread]
         );
     }
 
@@ -353,8 +354,8 @@ class ChatworkApi
     {
         $params = [
             'to_ids' => implode(',', $to_ids),
-            'body' => $body,
-            'limit' => $limit,
+            'body'   => $body,
+            'limit'  => $limit,
         ];
 
         return $this->api(

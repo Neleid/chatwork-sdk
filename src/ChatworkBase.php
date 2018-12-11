@@ -1,8 +1,8 @@
 <?php
 
-namespace wataridori\ChatworkSDK;
+namespace Neleid\ChatworkSDK;
 
-use wataridori\ChatworkSDK\Exception\NoChatworkRoomException;
+use Neleid\ChatworkSDK\Exception\NoChatworkRoomException;
 
 class ChatworkBase
 {

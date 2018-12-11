@@ -1,15 +1,19 @@
 {
-    "name": "wataridori/chatwork-sdk",
+    "name": "Neleid/chatwork-sdk",
     "description": "Just a non-official SDK for Chatwork",
     "license": "GPL-3.0",
     "authors": [
         {
             "name": "Tran Duc Thang",
             "email": "thangtd90@gmail.com"
+        },
+        {
+            "name": "Tokuhiro Chino",
+            "email": "chino@lastonepiece.jp"
         }
     ],
     "autoload": {
-        "psr-4": {"wataridori\\ChatworkSDK\\": "src/"}
+        "psr-4": {"Neleid\\ChatworkSDK\\": "src/"}
     },
     "minimum-stability": "dev"
 }

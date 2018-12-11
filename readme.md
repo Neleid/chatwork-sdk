@@ -1,14 +1,13 @@
 Chatwork SDK for PHP
 ==========
-##### [API Docs](http://wataridori.github.io/chatwork-sdk/api/index.html)
+##### [API Docs](http://Neleid.github.io/chatwork-sdk/api/index.html)
 ##### Remember that this SDK is non-official. It may not work when Chatwork update their APIs in the feature.
 ##### (However, I will try to cover all the changes from Chatwork. If something goes wrong, please let me know)
 
-[![StyleCI](https://styleci.io/repos/28799105/shield)](https://styleci.io/repos/28799105)
-[![Build Status](https://travis-ci.org/wataridori/chatwork-sdk.svg)](https://travis-ci.org/wataridori/chatwork-sdk)
-[![Latest Stable Version](https://poser.pugx.org/wataridori/chatwork-sdk/v/stable.svg)](https://packagist.org/packages/wataridori/chatwork-sdk)
-[![Total Downloads](https://poser.pugx.org/wataridori/chatwork-sdk/downloads)](https://packagist.org/packages/wataridori/chatwork-sdk)
-[![Latest Unstable Version](https://poser.pugx.org/wataridori/chatwork-sdk/v/unstable.svg)](https://packagist.org/packages/wataridori/chatwork-sdk)
+[![Build Status](https://travis-ci.org/Neleid/chatwork-sdk.svg)](https://travis-ci.org/Neleid/chatwork-sdk)
+[![Latest Stable Version](https://poser.pugx.org/Neleid/chatwork-sdk/v/stable.svg)](https://packagist.org/packages/Neleid/chatwork-sdk)
+[![Total Downloads](https://poser.pugx.org/Neleid/chatwork-sdk/downloads)](https://packagist.org/packages/Neleid/chatwork-sdk)
+[![Latest Unstable Version](https://poser.pugx.org/Neleid/chatwork-sdk/v/unstable.svg)](https://packagist.org/packages/Neleid/chatwork-sdk)
 [![License](https://poser.pugx.org/wataridori/chatwork-sdk/license.svg)](https://packagist.org/packages/wataridori/chatwork-sdk)
 
 ##### Chatwork SDK now supports [Chatwork API version 2](http://help.chatwork.com/hc/ja/articles/115000019401)
@@ -23,10 +22,10 @@ Chatwork SDK for PHP
 You can install and manage Chatwork SDK for PHP by using `Composer`
 
 ```
-composer require wataridori/chatwork-sdk
+composer require Neleid/chatwork-sdk
 ```
 
-Or add `wataridori/chatwork-sdk` into the require section of your `composer.json` file then run `composer update`
+Or add `Neleid/chatwork-sdk` into the require section of your `composer.json` file then run `composer update`
 
 ## Usage
 
@@ -103,7 +102,7 @@ if ($messages & !empty($messages[0])) {
 }
 ```
 
-##### Check ChatworkSDK functions list [here](http://wataridori.github.io/chatwork-sdk/api/class-wataridori.ChatworkSDK.ChatworkApi.html) for further details and usages.
+##### Check ChatworkSDK functions list [here](http://Neleid.github.io/chatwork-sdk/api/class-Neleid.ChatworkSDK.ChatworkApi.html) for further details and usages.
 
 ## Run test
 * Create a file named `config.json` inside the `tests/fixtures/` folder.
