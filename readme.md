@@ -1,10 +1,10 @@
 Chatwork SDK for PHP
 ==========
-##### [API Docs](http://Neleid.github.io/chatwork-sdk/api/index.html)
-##### Remember that this SDK is non-official. It may not work when Chatwork update their APIs in the feature.
-##### (However, I will try to cover all the changes from Chatwork. If something goes wrong, please let me know)
+This project is forked from [wataridori/chatwork-sdk](https://github.com/wataridori/chatwork-sdk) and added some features. If you want to use original repository, you should check [wataridori/chatwork-sdk](https://github.com/wataridori/chatwork-sdk).
 
-[![Build Status](https://travis-ci.org/Neleid/chatwork-sdk.svg)](https://travis-ci.org/Neleid/chatwork-sdk)
+##### Remember that this SDK is non-official. It may not work when Chatwork update their APIs in the feature.
+
+[![Build Status](https://travis-ci.org/Neleid/chatwork-sdk.svg?branch=master)](https://travis-ci.org/Neleid/chatwork-sdk)
 [![Latest Stable Version](https://poser.pugx.org/Neleid/chatwork-sdk/v/stable.svg)](https://packagist.org/packages/Neleid/chatwork-sdk)
 [![Total Downloads](https://poser.pugx.org/Neleid/chatwork-sdk/downloads)](https://packagist.org/packages/Neleid/chatwork-sdk)
 [![Latest Unstable Version](https://poser.pugx.org/Neleid/chatwork-sdk/v/unstable.svg)](https://packagist.org/packages/Neleid/chatwork-sdk)
@@ -14,7 +14,7 @@ Chatwork SDK for PHP
 ##### Check the Chatwork API Document [here](http://developer.chatwork.com/ja/index.html)
 
 ## Requirement
-* PHP >= 5.4
+* PHP >= 7.0
 * PHP cURL
 
 ## Install
@@ -101,8 +101,6 @@ if ($messages & !empty($messages[0])) {
     $room->sendMessage();
 }
 ```
-
-##### Check ChatworkSDK functions list [here](http://Neleid.github.io/chatwork-sdk/api/class-Neleid.ChatworkSDK.ChatworkApi.html) for further details and usages.
 
 ## Run test
 * Create a file named `config.json` inside the `tests/fixtures/` folder.

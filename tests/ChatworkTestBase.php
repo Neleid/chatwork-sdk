@@ -1,6 +1,6 @@
 <?php
 
-class ChatworkTestBase extends PHPUnit_Framework_TestCase
+class ChatworkTestBase extends \PHPUnit\Framework\TestCase
 {
     protected function loadFixture($name)
     {
