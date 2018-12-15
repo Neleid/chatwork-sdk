@@ -4,10 +4,10 @@ This project is forked from [wataridori/chatwork-sdk](https://github.com/watarid
 
 ##### Remember that this SDK is non-official. It may not work when Chatwork update their APIs in the feature.
 
-[![Build Status](https://travis-ci.org/Neleid/chatwork-sdk.svg?branch=master)](https://travis-ci.org/Neleid/chatwork-sdk)
-[![Latest Stable Version](https://poser.pugx.org/Neleid/chatwork-sdk/v/stable.svg)](https://packagist.org/packages/Neleid/chatwork-sdk)
-[![Total Downloads](https://poser.pugx.org/Neleid/chatwork-sdk/downloads)](https://packagist.org/packages/Neleid/chatwork-sdk)
-[![Latest Unstable Version](https://poser.pugx.org/Neleid/chatwork-sdk/v/unstable.svg)](https://packagist.org/packages/Neleid/chatwork-sdk)
+[![Build Status](https://travis-ci.org/neleid/chatwork-sdk.svg?branch=master)](https://travis-ci.org/neleid/chatwork-sdk)
+[![Latest Stable Version](https://poser.pugx.org/neleid/chatwork-sdk/v/stable.svg)](https://packagist.org/packages/neleid/chatwork-sdk)
+[![Total Downloads](https://poser.pugx.org/neleid/chatwork-sdk/downloads)](https://packagist.org/packages/neleid/chatwork-sdk)
+[![Latest Unstable Version](https://poser.pugx.org/neleid/chatwork-sdk/v/unstable.svg)](https://packagist.org/packages/neleid/chatwork-sdk)
 [![License](https://poser.pugx.org/wataridori/chatwork-sdk/license.svg)](https://packagist.org/packages/wataridori/chatwork-sdk)
 
 ##### Chatwork SDK now supports [Chatwork API version 2](http://help.chatwork.com/hc/ja/articles/115000019401)
@@ -22,10 +22,10 @@ This project is forked from [wataridori/chatwork-sdk](https://github.com/watarid
 You can install and manage Chatwork SDK for PHP by using `Composer`
 
 ```
-composer require Neleid/chatwork-sdk
+composer require neleid/chatwork-sdk
 ```
 
-Or add `Neleid/chatwork-sdk` into the require section of your `composer.json` file then run `composer update`
+Or add `neleid/chatwork-sdk` into the require section of your `composer.json` file then run `composer update`
 
 ## Usage
 
