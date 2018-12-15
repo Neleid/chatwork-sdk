@@ -5,10 +5,10 @@ This project is forked from [wataridori/chatwork-sdk](https://github.com/watarid
 ##### Remember that this SDK is non-official. It may not work when Chatwork update their APIs in the feature.
 
 [![Build Status](https://travis-ci.org/neleid/chatwork-sdk.svg?branch=master)](https://travis-ci.org/neleid/chatwork-sdk)
-[![Latest Stable Version](https://poser.pugx.org/neleid/chatwork-sdk/v/stable.svg)](https://packagist.org/packages/neleid/chatwork-sdk)
+[![Latest Stable Version](https://poser.pugx.org/neleid/chatwork-sdk/v/stable)](https://packagist.org/packages/neleid/chatwork-sdk)
 [![Total Downloads](https://poser.pugx.org/neleid/chatwork-sdk/downloads)](https://packagist.org/packages/neleid/chatwork-sdk)
-[![Latest Unstable Version](https://poser.pugx.org/neleid/chatwork-sdk/v/unstable.svg)](https://packagist.org/packages/neleid/chatwork-sdk)
-[![License](https://poser.pugx.org/wataridori/chatwork-sdk/license.svg)](https://packagist.org/packages/wataridori/chatwork-sdk)
+[![Latest Unstable Version](https://poser.pugx.org/neleid/chatwork-sdk/v/unstable)](https://packagist.org/packages/neleid/chatwork-sdk)
+[![License](https://poser.pugx.org/neleid/chatwork-sdk/license)](https://packagist.org/packages/neleid/chatwork-sdk)
 
 ##### Chatwork SDK now supports [Chatwork API version 2](http://help.chatwork.com/hc/ja/articles/115000019401)
 ##### Check the Chatwork API Document [here](http://developer.chatwork.com/ja/index.html)
