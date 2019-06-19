@@ -1,7 +1,5 @@
 Chatwork SDK for PHP
 ==========
-This project is forked from [wataridori/chatwork-sdk](https://github.com/wataridori/chatwork-sdk) and added some features. If you want to use original repository, you should check [wataridori/chatwork-sdk](https://github.com/wataridori/chatwork-sdk).
-
 ##### Remember that this SDK is non-official. It may not work when Chatwork update their APIs in the feature.
 
 [![Build Status](https://travis-ci.org/neleid/chatwork-sdk.svg?branch=master)](https://travis-ci.org/neleid/chatwork-sdk)
@@ -10,8 +8,19 @@ This project is forked from [wataridori/chatwork-sdk](https://github.com/watarid
 [![Latest Unstable Version](https://poser.pugx.org/neleid/chatwork-sdk/v/unstable)](https://packagist.org/packages/neleid/chatwork-sdk)
 [![License](https://poser.pugx.org/neleid/chatwork-sdk/license)](https://packagist.org/packages/neleid/chatwork-sdk)
 
-##### Chatwork SDK now supports [Chatwork API version 2](http://help.chatwork.com/hc/ja/articles/115000019401)
+This project is forked from [wataridori/chatwork-sdk](https://github.com/wataridori/chatwork-sdk) and added some features. If you want to use original repository, you should check [wataridori/chatwork-sdk](https://github.com/wataridori/chatwork-sdk).
+
+This repository is registered to Packagist. So you can use composer to install this repository with 'neleid/chatwork-sdk'.
+
+##### Chatwork SDK supports [Chatwork API version 2](http://help.chatwork.com/hc/ja/articles/115000019401)
 ##### Check the Chatwork API Document [here](http://developer.chatwork.com/ja/index.html)
+##### English API Document is [here](http://download.chatwork.com/ChatWork_API_Documentation.pdf)
+
+## Differences with original repository
+* Added support for Chatwork API usage limits. You can get API Usage Limits information after successfull API call.
+* Added support for Chatwork 'self_unread' feature. This enables the messages you posted unread. (It means you will be notified with chime.)
+* Changed namespace from wataridori to Neleid.
+* PHP Requirements is up to 7.0 from 5.4.
 
 ## Requirement
 * PHP >= 7.0
